@@ -1,3 +1,4 @@
+package Sorting;
 public class Insertion_sort {
 
     static void insertionsort(int[] arr, int n) {

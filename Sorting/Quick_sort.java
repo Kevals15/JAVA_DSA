@@ -1,4 +1,6 @@
-public class QuickSort {
+package Sorting;
+
+public class Quick_sort {
 
     static int partition(int[] arr, int left, int right) {
         int pivot = left;

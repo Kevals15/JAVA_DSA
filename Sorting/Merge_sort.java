@@ -1,4 +1,6 @@
-public class MergeSort {
+package Sorting;
+
+public class Merge_sort {
 
     static void mergeArray(int arr[], int start, int end, int mid) {
         int size = (end - start) + 1;
