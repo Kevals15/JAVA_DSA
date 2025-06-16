@@ -44,11 +44,35 @@ public class TwoSumInteger {
         return ans;
     }
 
+    // Optimal Approach
+    public static int[] findTwoSumOptimal(int[] arr, int target) {
+        int n = arr.length;
+        int[] ans = new int[2];
+        Arrays.sort(arr);
+        int left = 0;
+        int right = n - 1;
+        int sum = 0;
+        while (left <= right) {
+            sum = arr[left] + arr[right];
+
+            if (sum < target) {
+                left++;
+            } else if (sum > target) {
+                right--;
+            } else {
+                ans[0] = left;
+                ans[1] = right;
+                return ans;
+            }
+        }
+        return ans;
+    }
+
     public static void main(String[] args) {
         int[] arr = { 1, 3, 9, 6, 8 };
         int target = 14;
         int[] ans = new int[2];
-        ans = findTwoSumBetter(arr, target);
+        ans = findTwoSumOptimal(arr, target);
         System.out.println(Arrays.toString(ans));
     }
 }
